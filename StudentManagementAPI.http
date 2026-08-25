@@ -1,0 +1,35 @@
+@StudentManagementAPI_HostAddress = http://localhost:5139
+
+### Get all students
+GET {{StudentManagementAPI_HostAddress}}/api/students
+Accept: application/json
+
+###
+
+### Create a student
+POST {{StudentManagementAPI_HostAddress}}/api/students
+Content-Type: application/json
+
+{
+    "name": "Akshay",
+    "email": "akshay@gmail.com",
+    "course": "Data Science",
+    "age": 21
+}
+###
+
+### Update a student
+PUT {{StudentManagementAPI_HostAddress}}/api/students/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Akshay Boinwad",
+    "email": "akshay@gmail.com",
+    "course": "Data Science",
+    "age": 22
+}
+###
+
+### Delete a student
+DELETE {{StudentManagementAPI_HostAddress}}/api/students/1
